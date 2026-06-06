@@ -1,0 +1,5 @@
+crs,station_name,n_donors,ridge_alpha,pre_rmspe,augmented_sc_effect_pct
+EDB,Edinburgh,10,0.074,0.0371,-7.5
+NCL,Newcastle,12,0.0,0.0045,9.3
+MPT,Morpeth,12,3.257,0.1348,52.6
+SVG,Stevenage,12,0.0,0.0035,1.8

@@ -1,0 +1,8 @@
+{
+  "n_joined": 2586,
+  "n_exact_match": 2586,
+  "n_within_0.1pct": 2586,
+  "max_abs_diff": 0.0,
+  "max_rel_diff": 0.0,
+  "pearson_corr": 1.0
+}

@@ -1,0 +1,17 @@
+{
+  "recovery_driver_importance": {
+    "log_base": 0.3248,
+    "exposure_kgx": 0.0,
+    "season_share_2024": 0.0449,
+    "distance_to_london_km": 0.0482
+  },
+  "kgx_exposed_mean_recovery": 1.039,
+  "non_exposed_mean_recovery": 1.093,
+  "lumo_excess_vs_predicted": {
+    "MPT": 12.1,
+    "NCL": 11.8,
+    "EDB": 7.5,
+    "SVG": -0.3
+  },
+  "note": "4 treated units -> descriptive heterogeneity; full Causal Forest needs many treated units (pool open-access launches or use OD-pairs)."
+}

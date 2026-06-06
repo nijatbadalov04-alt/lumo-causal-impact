@@ -1,0 +1,12 @@
+# Patterns DVC should ignore when computing hashes / tracking directories.
+# Same spirit as .gitignore: don't fingerprint generated probes, caches, or OS cruft.
+
+# One-off structure probes written next to the parsed data (exploration only).
+data/interim/_inspect_*.txt
+
+# Caches / cruft that may appear under tracked dirs.
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+desktop.ini

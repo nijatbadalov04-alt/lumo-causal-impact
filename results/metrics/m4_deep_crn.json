@@ -1,0 +1,57 @@
+{
+  "architecture": "CRN-lite (domain-adversarial treatment-invariant representation)",
+  "gpu": {
+    "gpu_util_mean": 99.1,
+    "gpu_util_p50": 100.0,
+    "gpu_util_p90": 100.0,
+    "gpu_util_max": 100.0,
+    "gpu_mem_used_mb_max": 6422.0,
+    "n_samples": 245
+  },
+  "train_seconds": 77.6,
+  "epochs": 2000,
+  "params_millions": 22.03,
+  "lambda_max": 0.2,
+  "conformal_q90_log": 0.15593413057518632,
+  "n_calib_donors": 468,
+  "effects": {
+    "EDB": {
+      "crn_effect_pct": 4.2,
+      "conformal_lo_pct": -10.9,
+      "conformal_hi_pct": 21.7
+    },
+    "NCL": {
+      "crn_effect_pct": 9.3,
+      "conformal_lo_pct": -6.5,
+      "conformal_hi_pct": 27.8
+    },
+    "MPT": {
+      "crn_effect_pct": 13.5,
+      "conformal_lo_pct": -2.9,
+      "conformal_hi_pct": 32.6
+    },
+    "SVG": {
+      "crn_effect_pct": 2.3,
+      "conformal_lo_pct": -12.5,
+      "conformal_hi_pct": 19.6
+    }
+  },
+  "agreement_with_attention_model_pct": {
+    "EDB": {
+      "crn": 4.2,
+      "attention": 2.8
+    },
+    "NCL": {
+      "crn": 9.3,
+      "attention": 5.0
+    },
+    "MPT": {
+      "crn": 13.5,
+      "attention": 9.1
+    },
+    "SVG": {
+      "crn": 2.3,
+      "attention": 3.9
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "scope": "Net CO2e of the ODM corridor market growth Lumo catalysed (operator-agnostic). Per-pair emissions from GTD (2025-26 snapshot); 1 journey = 1 one-way pax trip.",
+  "pre_years": [
+    2018,
+    2019
+  ],
+  "post_years": [
+    2023,
+    2024
+  ],
+  "per_city": {
+    "Edinburgh": {
+      "delta_journeys_per_yr": 831692,
+      "saving_if_all_from_air_tonnes": 125751.83039999999,
+      "saving_if_all_from_car_tonnes": 98663.62195999999,
+      "cost_if_all_induced_tonnes": -11469.25156134385,
+      "net_if_half_air_half_car_abstracted_tonnes": 112207.72618,
+      "breakeven_induced_share": 0.9072644580195802,
+      "_per_pax": {
+        "rail_kg": 13.790263175964,
+        "saving_vs_air_kg": 151.2,
+        "saving_vs_car_kg": 118.63
+      }
+    },
+    "Newcastle": {
+      "delta_journeys_per_yr": 256361,
+      "saving_if_all_from_air_tonnes": 26412.873830000004,
+      "saving_if_all_from_car_tonnes": 20680.641870000003,
+      "cost_if_all_induced_tonnes": -2619.595820002441,
+      "net_if_half_air_half_car_abstracted_tonnes": 23546.757849999998,
+      "breakeven_induced_share": 0.8998868603153679,
+      "_per_pax": {
+        "rail_kg": 10.218386650085,
+        "saving_vs_air_kg": 103.03,
+        "saving_vs_car_kg": 80.67
+      }
+    }
+  },
+  "corridor_total": {
+    "saving_if_all_from_air_tonnes": 152164.70423,
+    "saving_if_all_from_car_tonnes": 119344.26383,
+    "cost_if_all_induced_tonnes": -14088.847381346292,
+    "net_if_half_air_half_car_abstracted_tonnes": 135754.48403
+  },
+  "caa_informed_central": {
+    "Edinburgh": {
+      "air_abstraction_share": 0.655,
+      "net_saving_ktonnes_residual_induced": 78.4,
+      "net_saving_ktonnes_residual_car": 116.4
+    },
+    "Newcastle": {
+      "air_abstraction_share": 0.051,
+      "net_saving_ktonnes_residual_induced": -1.1,
+      "net_saving_ktonnes_residual_car": 21.0
+    },
+    "corridor_total_ktonnes": {
+      "central_conservative_residual_induced": 77.3,
+      "upper_residual_car": 137.4
+    }
+  },
+  "carbon_monte_carlo_ci": {
+    "Edinburgh": {
+      "p05_ktonnes": 75.9,
+      "p50_ktonnes": 98.2,
+      "p95_ktonnes": 114.9
+    },
+    "Newcastle": {
+      "p05_ktonnes": -0.1,
+      "p50_ktonnes": 10.1,
+      "p95_ktonnes": 20.0
+    },
+    "corridor_total_ktonnes": {
+      "p05": 83.7,
+      "p50": 108.3,
+      "p95": 128.8
+    }
+  },
+  "corridor_total_air_saving_equiv_cars_off_road": 69166,
+  "headline": "Long-distance rail is ~12x cleaner per passenger than flying this corridor, so the market growth is net carbon-BENEFICIAL unless the large majority of new journeys are purely induced. The CAA air test estimates the air-abstraction share to pin the point."
+}

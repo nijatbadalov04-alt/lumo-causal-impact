@@ -1,0 +1,29 @@
+# CI / CPU-only requirements.
+#
+# WHY THIS FILE EXISTS
+# --------------------
+# `requirements.txt` deliberately does NOT pin `torch`: on the dev box torch is
+# installed from the Blackwell CUDA wheel index (`+cu128`, see Makefile / README),
+# which is a multi-GB GPU build that will not install on (and would blow the disk
+# of) a CPU CI runner or a slim Docker image.
+#
+# However, `pytest` *collects* `tests/test_imports.py`, which imports
+# `src.models.deep.deep_counterfactual` and `..._gru`. Both modules do a bare
+# top-level `import torch`. The CUDA work itself is guarded inside `main()`
+# (`if not torch.cuda.is_available(): return`), so a CPU torch is sufficient — but
+# torch must still be *importable* for collection to succeed.
+#
+# This file therefore = the pinned CPU stack (requirements.txt) + a CPU-only torch
+# of the same version as the dev box (2.11.0), pulled from the PyTorch CPU index.
+# Use it in CI and in the Docker image instead of requirements.txt.
+#
+#   pip install -r requirements-ci.txt --extra-index-url https://download.pytorch.org/whl/cpu
+#
+# (The --extra-index-url is also baked into the CI workflow and the Dockerfile so a
+# plain `pip install -r requirements-ci.txt` works there.)
+
+-r requirements.txt
+
+# CPU build of the same torch version used for the GPU deep-counterfactual stage.
+# Resolved from https://download.pytorch.org/whl/cpu (see --extra-index-url above).
+torch==2.11.0

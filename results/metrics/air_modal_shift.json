@@ -1,0 +1,54 @@
+{
+  "design": "CAA London-area air passengers vs ODM rail journeys, same corridors/years/units.",
+  "pre_years": [
+    2018,
+    2019
+  ],
+  "post_years": [
+    2023,
+    2024
+  ],
+  "per_corridor": {
+    "Newcastle": {
+      "air_pre": 480658,
+      "air_post": 467660,
+      "rail_pre": 1281747,
+      "rail_post": 1538108,
+      "d_rail": 256361,
+      "d_air": -12999,
+      "d_total_market": 243362,
+      "rail_share_pre": 0.727,
+      "rail_share_post": 0.767,
+      "air_abstraction_of_rail_growth": 0.051,
+      "induced_or_car_residual": 243362
+    },
+    "Edinburgh": {
+      "air_pre": 3428777,
+      "air_post": 2884350,
+      "rail_pre": 1388685,
+      "rail_post": 2220377,
+      "d_rail": 831692,
+      "d_air": -544428,
+      "d_total_market": 287264,
+      "rail_share_pre": 0.288,
+      "rail_share_post": 0.435,
+      "air_abstraction_of_rail_growth": 0.655,
+      "induced_or_car_residual": 287264
+    },
+    "Glasgow Central": {
+      "air_pre": 2393030,
+      "air_post": 2046549,
+      "rail_pre": 721432,
+      "rail_post": 752626,
+      "d_rail": 31194,
+      "d_air": -346480,
+      "d_total_market": -315286,
+      "rail_share_pre": 0.232,
+      "rail_share_post": 0.269,
+      "air_abstraction_of_rail_growth": 1.0,
+      "induced_or_car_residual": 0
+    }
+  },
+  "headline_edinburgh": "London-Edinburgh: rail +832k, air -544k; rail share 29%->43%. ~65% of the rail growth is air-abstraction; the rest is induced demand or car-abstraction.",
+  "caveats": "Air decline is partly COVID-structural and corridor-wide (Azuma + Lumo, not Lumo alone); some London-Edinburgh air is Heathrow hub-feed that cannot realistically switch to rail. Glasgow (WCML/Avanti, no Lumo) is the placebo contrast."
+}

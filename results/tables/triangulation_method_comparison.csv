@@ -1,0 +1,5 @@
+crs,station,naive_sc_pct,naive_sc_p,within_corridor_pct,within_corridor_p,augmented_sc_pct,deep_pct,deep_conf_lo,deep_conf_hi
+NCL,Newcastle,17.4079528438968,0.0975609756097561,12.2,0.538,9.3,5.0,-6.2,17.5
+SVG,Stevenage,8.788863780685086,0.04878048780487805,-11.0,0.538,1.8,3.9,-7.2,16.2
+MPT,Morpeth,45.5803499061181,0.04878048780487805,31.5,0.538,52.6,9.1,-2.5,22.1
+EDB,Edinburgh,23.12968292932087,0.8048780487804879,-0.6,1.0,-7.5,2.8,-8.1,15.1

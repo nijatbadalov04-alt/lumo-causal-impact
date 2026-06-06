@@ -1,0 +1,18 @@
+level,method,estimand,estimate_pct,ci_lo,ci_hi,inference,verdict
+station-total,Naive off-ECML SC,NCL station total,17.4,,,placebo p=0.10,CONFOUNDED (retracted)
+station-total,Within-corridor SC,NCL vs ECML donors,12.2,,,placebo p=0.538,not significant
+station-total,Generalised SC (IFE),"NCL, r=3 factors",16.3,,,robust to r,descriptive
+station-total,Event-study DiD,Lumo stns avg post,3.7,,,parallel-trends OK,small
+station-total,Deep counterfactual,NCL (conformal),5.0,-6.2,17.5,conformal 90% spans 0,not significant
+station-total,Callaway-Sant'Anna,overall short-run ATT,16.3,,,randomization p=0.1564,not significant
+operator,DiD-in-ratios,LNER recovery vs peers,25.4,,,vs peers <100%,"large, descriptive"
+operator,CausalImpact / BSTS,LNER vs synthetic,-4.8,-19.3,12.2,95% CI excl 0: False,not significant
+market-OD,ODM market recovery,Edinburgh<->London,59.9,,,operator-agnostic market,CREATION
+market-OD,ODM market recovery,Newcastle<->London,20.0,,,operator-agnostic market,CREATION
+market-OD,Placebo-in-space (RI),EDB vs 391 flows,59.9,,,RI p=0.0077,SIGNIFICANT
+market-OD,Corridor clustering,ECML vs other long-dist,20.5,,,perm p=7e-05,SIGNIFICANT
+market-OD,OD event-study DiD,treated x post,79.5,,,perm p=0.0019,SIGNIFICANT
+market-OD,Causal forest (DML),"ECML CATE, 391 flows",22.0,11.5,36.0,95% CI excludes 0,SIGNIFICANT
+external,GC replication (pre-COVID),Sunderland,72.9,,,placebo p=0.1881,suggestive (NS)
+external,GC replication (pre-COVID),Bradford,49.4,,,placebo p=0.1761,suggestive (NS)
+external,Open-access sector,intercept growth x,213.0,,,2011->2024,3.1x sector growth

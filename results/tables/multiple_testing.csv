@@ -1,0 +1,7 @@
+test,p,bh_adjusted_p,bonferroni_survives,holm_survives,bh_survives
+East-Coast corridor clustering (distance-matched),7e-05,0.0001,True,True,True
+OD-flow event-study DiD (treated x post),0.0019,0.0023,True,True,True
+Edinburgh placebo-in-space (all flows),0.0077,0.0116,True,True,True
+Lumo vs off-corridor gap (exact),0.0222,0.0444,False,False,True
+Edinburgh distance-matched placebo (>=200km),0.0286,0.0858,False,False,True
+Newcastle placebo-in-space (all flows),0.0588,0.3528,False,False,False

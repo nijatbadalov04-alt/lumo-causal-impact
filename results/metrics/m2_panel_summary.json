@@ -1,0 +1,39 @@
+{
+  "lennon_years": [
+    2004,
+    2024
+  ],
+  "n_years": 21,
+  "n_stations": 2591,
+  "n_balanced_stations": 2466,
+  "treated_lumo": [
+    "EDB",
+    "NCL",
+    "MPT",
+    "SVG"
+  ],
+  "n_kgx_exposed_stations": 21,
+  "kgx_exposed_examples": [
+    "Leeds",
+    "Cambridge",
+    "Newcastle",
+    "York",
+    "Peterborough",
+    "Stevenage",
+    "Doncaster",
+    "Darlington",
+    "Welwyn Garden City",
+    "Hatfield (Herts)",
+    "Lincoln",
+    "Letchworth Garden City",
+    "Grantham",
+    "Cambridge North",
+    "St Neots",
+    "Newark Northgate",
+    "Kings Lynn",
+    "Retford",
+    "Knebworth",
+    "Welwyn North"
+  ],
+  "donor_eligible_pool": 2364
+}

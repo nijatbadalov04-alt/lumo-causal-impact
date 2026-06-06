@@ -1,0 +1,58 @@
+{
+  "design": "Causal forest on 391 OD flows: CATE of East-Coast-corridor membership on log recovery.",
+  "identification": "selection-on-observables (distance + log pre-volume); weaker than the event-study design.",
+  "n_flows": 388,
+  "n_ecml": 15,
+  "dml_ate_log": 0.1985,
+  "dml_ate_pct": 22.0,
+  "dml_ate_ci95_pct": [
+    11.5,
+    36.0
+  ],
+  "dml_ate_boot_se_log": 0.05,
+  "dml_ate_ci_excludes_zero": true,
+  "tlearner_att_pct": 24.7,
+  "cate_distance_gradient_pct_per_100km_treated": -1.15,
+  "cate_distance_corr_treated_only": -0.264,
+  "cate_distance_note": "15 ECML flows only -> under-powered; read as NO detectable distance trend",
+  "top_cate_flows": [
+    {
+      "flow": "Hitchin",
+      "distance_km": 48.0,
+      "cate_log": 0.3629,
+      "cate_pct": 43.7
+    },
+    {
+      "flow": "Durham",
+      "distance_km": 374.0,
+      "cate_log": 0.2827,
+      "cate_pct": 32.7
+    },
+    {
+      "flow": "Harrogate",
+      "distance_km": 290.0,
+      "cate_log": 0.2702,
+      "cate_pct": 31.0
+    },
+    {
+      "flow": "Peterborough",
+      "distance_km": 116.0,
+      "cate_log": 0.2591,
+      "cate_pct": 29.6
+    },
+    {
+      "flow": "Retford",
+      "distance_km": 206.0,
+      "cate_log": 0.2401,
+      "cate_pct": 27.1
+    },
+    {
+      "flow": "Wakefield Westgate",
+      "distance_km": 257.0,
+      "cate_log": 0.232,
+      "cate_pct": 26.1
+    }
+  ],
+  "identification_caveat_2": "Treatment = East-Coast-CORRIDOR membership, broader than open-access entry (10/15 treated flows are LNER-only intermediate stops). So +22% is a corridor-membership effect, NOT a clean open-access causal effect; do not equate the two.",
+  "interpretation": "Adjusting for distance and pre-volume, East-Coast-corridor flows recovered ~22.0% more than comparable non-ECML flows (DML ATE, 95% CI excludes 0) \u2014 a covariate-adjusted CORRIDOR-membership effect on 388 flows, the heterogeneous-effect estimate the 4-station RF could not provide. There is NO detectable distance trend in the treated CATE (15 ECML flows, under-powered) \u2014 the effect is broad across the corridor, not confined to the longest air-competitive routes. Significance rests on the bootstrap CI excluding 0, not on a p-value."
+}

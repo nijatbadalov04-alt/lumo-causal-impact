@@ -1,0 +1,47 @@
+{
+  "design": "Pre-COVID placebo-in-space DiD on Grand Central stations (external validity of the Lumo finding).",
+  "hull_note": "Hull Trains (2000) launched before the 2004 LENNON panel start -> no clean pre-period, not tested.",
+  "results": {
+    "SUN": {
+      "station": "Sunderland",
+      "operator": "Grand Central",
+      "pre_window": [
+        2004,
+        2006
+      ],
+      "post_window": [
+        2008,
+        2011
+      ],
+      "effect_log": 0.5475,
+      "effect_pct": 72.9,
+      "donor_median_pct": 31.2,
+      "rank_of_n": [
+        440,
+        2339
+      ],
+      "placebo_p_value": 0.1881
+    },
+    "BDI": {
+      "station": "Bradford Interchange",
+      "operator": "Grand Central",
+      "pre_window": [
+        2007,
+        2009
+      ],
+      "post_window": [
+        2011,
+        2014
+      ],
+      "effect_log": 0.4017,
+      "effect_pct": 49.4,
+      "donor_median_pct": 19.6,
+      "rank_of_n": [
+        412,
+        2339
+      ],
+      "placebo_p_value": 0.1761
+    }
+  },
+  "interpretation": "Grand Central's pre-COVID entries grew their served stations above comparable clean donors (Sunderland +73%, Bradford +49% vs donor medians ~+31%/+20%), with NO pandemic confounding. BUT as single-station placebo tests NEITHER clears conventional significance (placebo p~0.18-0.19; ~1 in 5 random donors grew at least as much). So this is SUGGESTIVE, directionally-consistent external validity \u2014 NOT a significant second test. The Lumo OD-flow analysis remains the decisive evidence; GC merely shows the sign generalises pre-COVID."
+}

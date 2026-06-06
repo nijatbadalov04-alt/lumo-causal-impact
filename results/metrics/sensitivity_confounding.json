@@ -1,0 +1,28 @@
+{
+  "design": "Sensitivity of the OD corridor effect to UNOBSERVED confounding (391 flows).",
+  "effect_log_pp": 0.1598,
+  "effect_pct": 17.3,
+  "t_stat": 2.51,
+  "dof": 384,
+  "cinelli_hazlett": {
+    "robustness_value_to_zero": 0.12,
+    "robustness_value_to_nonsig_5pct": 0.027,
+    "benchmark_partial_r2_distance": 0.139,
+    "benchmark_partial_r2_log_prevolume": 0.013,
+    "RV_vs_strongest_observed_covariate_x": 0.9
+  },
+  "oster_delta": {
+    "beta_restricted": 0.335,
+    "r2_restricted": 0.077,
+    "beta_full": 0.16,
+    "r2_full": 0.155,
+    "rmax": 0.202,
+    "delta_for_zero": 1.531,
+    "bias_adjusted_beta_delta1": 0.055
+  },
+  "evalue": {
+    "corridor_recovery_ratio": 1.308,
+    "e_value": 1.94
+  },
+  "interpretation": "MIXED, reported honestly. Oster's delta = 1.5 (|delta|>1: selection on unobservables would have to EXCEED selection on observables to zero it; bias-adjusted beta* keeps its sign) and the E-value = 1.94 both lean ROBUST. BUT the Cinelli-Hazlett robustness value is only 0.12 (~0.9x the partial R^2 of distance, 0.14) and the RV-to-non-significance is 0.03 \u2014 so the LINEAR covariate-adjusted effect alone is NOT bulletproof: a single confounder about as strong as distance could attenuate it. This is exactly WHY identification rests primarily on the DESIGN-based evidence \u2014 the Glasgow placebo, the flat pre-trend, the rank-based corridor clustering (p=0.0001) and the OD event-study DiD (p=0.002), all far stronger than the linear regression \u2014 rather than on selection-on-observables. The sensitivity analysis correctly positions the linear adjustment as corroboration, not the anchor."
+}

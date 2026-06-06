@@ -1,0 +1,3 @@
+crs,station,operator,pre_window,post_window,effect_pct,donor_median_pct,placebo_p_value
+SUN,Sunderland,Grand Central,2004-2006,2008-2011,72.9,31.2,0.1881
+BDI,Bradford Interchange,Grand Central,2007-2009,2011-2014,49.4,19.6,0.1761

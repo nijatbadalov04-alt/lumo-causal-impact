@@ -1,0 +1,72 @@
+{
+  "concern": "placebo-in-space vs ALL flows mixes short commuter flows; match on distance.",
+  "distance_matched_placebo": {
+    "150": {
+      "n_flows": 56,
+      "median_recovery": 0.974,
+      "treated": {
+        "Edinburgh": {
+          "recovery": 1.599,
+          "rank": 1,
+          "n": 56,
+          "p_value": 0.0179
+        },
+        "Newcastle": {
+          "recovery": 1.2,
+          "rank": 10,
+          "n": 56,
+          "p_value": 0.1786
+        }
+      }
+    },
+    "200": {
+      "n_flows": 35,
+      "median_recovery": 1.043,
+      "treated": {
+        "Edinburgh": {
+          "recovery": 1.599,
+          "rank": 1,
+          "n": 35,
+          "p_value": 0.0286
+        },
+        "Newcastle": {
+          "recovery": 1.2,
+          "rank": 8,
+          "n": 35,
+          "p_value": 0.2286
+        }
+      }
+    },
+    "300": {
+      "n_flows": 8,
+      "median_recovery": 1.081,
+      "treated": {
+        "Edinburgh": {
+          "recovery": 1.599,
+          "rank": 1,
+          "n": 8,
+          "p_value": 0.125
+        },
+        "Newcastle": {
+          "recovery": 1.2,
+          "rank": 3,
+          "n": 8,
+          "p_value": 0.375
+        }
+      }
+    }
+  },
+  "primary_threshold_km": 200,
+  "corridor_clustering": {
+    "ecml_n": 11,
+    "ecml_median_recovery": 1.205,
+    "non_ecml_n": 24,
+    "non_ecml_median_recovery": 0.921,
+    "median_gap": 0.284,
+    "perm_p_median": 7e-05,
+    "mean_gap": 0.318,
+    "perm_p_mean": 3e-05,
+    "ecml_in_top10": 7
+  },
+  "interpretation": "Among comparable long-distance London flows Edinburgh ranks #1, and the East Coast corridor as a whole out-recovered non-ECML long-distance flows (median 1.21 vs 0.92, permutation p\u22480.0001). The growth is a CORRIDOR-LEVEL effect, not one lucky station \u2014 and far more rigorous than the unmatched all-flows comparison."
+}

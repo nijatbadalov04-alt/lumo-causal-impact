@@ -1,0 +1,12 @@
+test,unit,effect_pct,pre_rmspe
+placebo_in_time_2018,NCL,0.8,0.0126
+placebo_in_time_2018,SVG,-4.8,0.0
+placebo_in_time_2018,MPT,17.7,0.0155
+donor_sensitivity_baseline,NCL,17.4,0.0148
+donor_sensitivity_excl_Avanti,NCL,18.4,0.0145
+donor_sensitivity_excl_Elizabeth,NCL,30.9,0.0141
+donor_sensitivity_excl_both,NCL,24.8,0.0161
+ecml_through_confound,YRK,18.1,0.014
+ecml_through_confound,DON,24.8,0.0443
+ecml_through_confound,DAR,14.7,0.011
+ecml_through_confound,GRA,16.1,0.0075

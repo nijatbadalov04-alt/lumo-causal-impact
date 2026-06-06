@@ -1,0 +1,48 @@
+# ---- Python / environment ----
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- Secrets / local config (never commit credentials) ----
+.env
+*.env
+configs/secrets.local.yaml
+configs/*secret*
+
+# ---- Data (provenance tracked in data/README.md + docs/DATA_SOURCES.md;
+#      re-obtainable via the sources / src/ingest) ----
+data/raw/**
+!data/raw/.gitkeep
+data/interim/**
+!data/interim/.gitkeep
+data/processed/**
+!data/processed/.gitkeep
+
+# ---- Heavy model artefacts (re-creatable from configs + seeds) ----
+results/checkpoints/**
+!results/checkpoints/.gitkeep
+*.pt
+*.ckpt
+*.npy
+*.npz
+*.memmap
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- OS / editor cruft ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

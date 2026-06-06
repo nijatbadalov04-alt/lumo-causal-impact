@@ -1,0 +1,68 @@
+[
+  {
+    "test": "placebo_in_time_2018",
+    "unit": "NCL",
+    "effect_pct": 0.8,
+    "pre_rmspe": 0.0126
+  },
+  {
+    "test": "placebo_in_time_2018",
+    "unit": "SVG",
+    "effect_pct": -4.8,
+    "pre_rmspe": 0.0
+  },
+  {
+    "test": "placebo_in_time_2018",
+    "unit": "MPT",
+    "effect_pct": 17.7,
+    "pre_rmspe": 0.0155
+  },
+  {
+    "test": "donor_sensitivity_baseline",
+    "unit": "NCL",
+    "effect_pct": 17.4,
+    "pre_rmspe": 0.0148
+  },
+  {
+    "test": "donor_sensitivity_excl_Avanti",
+    "unit": "NCL",
+    "effect_pct": 18.4,
+    "pre_rmspe": 0.0145
+  },
+  {
+    "test": "donor_sensitivity_excl_Elizabeth",
+    "unit": "NCL",
+    "effect_pct": 30.9,
+    "pre_rmspe": 0.0141
+  },
+  {
+    "test": "donor_sensitivity_excl_both",
+    "unit": "NCL",
+    "effect_pct": 24.8,
+    "pre_rmspe": 0.0161
+  },
+  {
+    "test": "ecml_through_confound",
+    "unit": "YRK",
+    "effect_pct": 18.1,
+    "pre_rmspe": 0.014
+  },
+  {
+    "test": "ecml_through_confound",
+    "unit": "DON",
+    "effect_pct": 24.8,
+    "pre_rmspe": 0.0443
+  },
+  {
+    "test": "ecml_through_confound",
+    "unit": "DAR",
+    "effect_pct": 14.7,
+    "pre_rmspe": 0.011
+  },
+  {
+    "test": "ecml_through_confound",
+    "unit": "GRA",
+    "effect_pct": 16.1,
+    "pre_rmspe": 0.0075
+  }
+]

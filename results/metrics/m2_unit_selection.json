@@ -1,0 +1,28 @@
+{
+  "role_counts": {
+    "excluded": 220,
+    "treated_lumo": 4,
+    "ecml_corridor_control": 27,
+    "donor_clean": 2340
+  },
+  "n_donor_clean": 2340,
+  "n_donor_clean_large_intercity": 471,
+  "ecml_north_names_matched": [
+    "Alnmouth",
+    "Berwick-Upon-Tweed",
+    "Chester-Le-Street",
+    "Darlington",
+    "Doncaster",
+    "Dunbar",
+    "Durham",
+    "Edinburgh",
+    "Leeds",
+    "Morpeth",
+    "Newcastle",
+    "Northallerton",
+    "Thirsk",
+    "Wakefield Westgate",
+    "York"
+  ],
+  "ecml_north_names_missing": []
+}

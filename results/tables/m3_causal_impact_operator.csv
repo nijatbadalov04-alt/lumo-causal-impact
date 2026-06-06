@@ -1,0 +1,9 @@
+,value
+n_pre_quarters,43
+n_post_quarters,16
+controls,"['CrossCountry', 'Great Western Railway', 'East Midlands Railway', 'TransPennine Express']"
+LNER_rel_effect_pct,-4.8
+LNER_rel_effect_ci95_pct,"[-19.3, 12.2]"
+LNER+Lumo_rel_effect_pct,-0.2
+cumulative_excess_journeys_m,-5.7
+lner_effect_95ci_excludes_zero,False

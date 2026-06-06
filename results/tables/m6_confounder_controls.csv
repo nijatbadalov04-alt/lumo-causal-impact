@@ -1,0 +1,8 @@
+,value
+lner_ppm_pre_mean,86.4
+lner_ppm_post_mean,81.6
+lner_ppm_shift_pp,-4.9
+long_distance_fare_index,"{'2019': {'All standard class': 248.6, 'All tickets': 264.1, 'First class unregulated': 321.4, 'Standard class regulated': 202.3, 'Standard class unregulated': 276.8}}"
+fare_yoy_pct_2021,
+fare_yoy_pct_2022,
+fare_yoy_pct_mean_2010_2019,2.7

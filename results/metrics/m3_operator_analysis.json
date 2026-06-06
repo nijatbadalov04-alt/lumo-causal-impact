@@ -1,0 +1,26 @@
+{
+  "recovery_ratio_2024_over_2019": {
+    "London North Eastern Railway": 1.254,
+    "LNER+Lumo": 1.32,
+    "CrossCountry": 0.95,
+    "Great Western Railway": 0.917,
+    "East Midlands Railway": 1.241,
+    "TransPennine Express": 0.963,
+    "Avanti West Coast": 0.931,
+    "Total": 0.994
+  },
+  "lner_synthetic_control": {
+    "peers": [
+      "CrossCountry",
+      "Great Western Railway",
+      "East Midlands Railway",
+      "TransPennine Express"
+    ],
+    "LNER_vs_peers_pct": 32.2,
+    "LNER+Lumo_vs_peers_pct": 37.8,
+    "LNER_vs_peers_excl_EMR_pct": 43.5,
+    "LNER+Lumo_vs_peers_excl_EMR_pct": 49.6
+  },
+  "lner_2024_m": 26.63575908,
+  "lumo_2024_m": 1.38321077
+}

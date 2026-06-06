@@ -1,0 +1,34 @@
+[
+  {
+    "crs": "EDB",
+    "station_name": "Edinburgh",
+    "n_donors": 10,
+    "ridge_alpha": 0.074,
+    "pre_rmspe": 0.0371,
+    "augmented_sc_effect_pct": -7.5
+  },
+  {
+    "crs": "NCL",
+    "station_name": "Newcastle",
+    "n_donors": 12,
+    "ridge_alpha": 0.0,
+    "pre_rmspe": 0.0045,
+    "augmented_sc_effect_pct": 9.3
+  },
+  {
+    "crs": "MPT",
+    "station_name": "Morpeth",
+    "n_donors": 12,
+    "ridge_alpha": 3.257,
+    "pre_rmspe": 0.1348,
+    "augmented_sc_effect_pct": 52.6
+  },
+  {
+    "crs": "SVG",
+    "station_name": "Stevenage",
+    "n_donors": 12,
+    "ridge_alpha": 0.0,
+    "pre_rmspe": 0.0035,
+    "augmented_sc_effect_pct": 1.8
+  }
+]

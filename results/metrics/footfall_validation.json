@@ -1,0 +1,18 @@
+{
+  "construct_validity_fy": "2023-24",
+  "n_stations": 18,
+  "pearson_log_corr": 0.927,
+  "spearman_rank_corr": 0.907,
+  "concourse_multiplier_median": 2.59,
+  "concourse_multiplier_range": [
+    1.2,
+    3.82
+  ],
+  "edinburgh_real_footfall_by_fy": {
+    "2023-24": 60142098,
+    "2024-25": 62692147,
+    "2025-26": 65197357
+  },
+  "edinburgh_real_growth_first_to_last_fy": 0.084,
+  "interpretation": "Modelled usage and real footfall correlate strongly across the 18 managed stations (validity), with a station-specific concourse multiplier; Edinburgh Waverley real counts kept rising post-Lumo -- consistent with the modelled corridor growth being real."
+}

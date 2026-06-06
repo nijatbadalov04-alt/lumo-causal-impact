@@ -1,0 +1,82 @@
+# DVC pipeline description (high level).
+#
+# This mirrors the milestone groups in run_pipeline.py as a DVC DAG so the
+# ingest -> clean -> features -> models -> evaluate flow is reproducible and
+# (optionally) cache-aware. Each stage shells out to run_pipeline.py with a
+# --from / --only selector rather than duplicating Python here, so this file
+# never drifts from the actual stage list.
+#
+# Usage:
+#   dvc repro                 # run the whole DAG (stages whose deps changed)
+#   dvc repro features        # run up to and including the `features` stage
+#   dvc dag                   # visualise the DAG
+#
+# DATA: the raw inputs are large (~2.3 GB) and user-provided. Track them with
+#   `dvc add data/raw` (see data/README_DVC.md) — they are an *external dep* of
+#   the `ingest`/`clean` stages below, not produced by them. No remote is
+#   required for local reproduction; add one later with `dvc remote add`.
+#
+# NOTE: outs are intentionally light-touch (directories), and no md5s are
+# committed here — DVC computes those on first `dvc repro`/`dvc add`. The
+# auto-download stages (ORR, CAA) populate parts of data/raw themselves; the
+# Rail Data Marketplace inputs (ODM, carbon, footfall) are dropped in by hand.
+
+stages:
+  ingest:
+    desc: "Download ORR station-usage tables, operator/confounder data, and CAA air routes."
+    cmd: python run_pipeline.py --from M1.download
+    deps:
+      - run_pipeline.py
+      - src/ingest
+      - configs
+    outs:
+      - data/raw/_manifest.json:
+          cache: false
+          persist: true
+
+  clean:
+    desc: "Parse/type raw tables -> tidy Parquet (station usage, 1410 snapshot, carbon, footfall, operator)."
+    cmd: python run_pipeline.py --from M1.parse_1415
+    deps:
+      - src/clean
+      - data/raw
+    outs:
+      - data/interim:
+          cache: false
+          persist: true
+
+  features:
+    desc: "Build the unified station x year panel, select donor units, and covariates."
+    cmd: python run_pipeline.py --from M2.build_panel
+    deps:
+      - src/features
+      - data/interim
+    outs:
+      - data/processed:
+          cache: false
+          persist: true
+
+  models:
+    desc: "Estimate effects: synthetic control (classical/augmented/generalised), OD-pair tests, DiD/event study, CausalImpact, deep counterfactual, causal forest."
+    cmd: python run_pipeline.py --from M3.synth_control
+    deps:
+      - src/models
+      - data/processed
+    outs:
+      - results/metrics:
+          cache: false
+          persist: true
+      - results/figures:
+          cache: false
+          persist: true
+
+  evaluate:
+    desc: "Robustness, triangulation across estimators, confounder/footfall validation, and multiple-testing correction."
+    cmd: python run_pipeline.py --from M4.triangulation
+    deps:
+      - src/evaluate
+      - results/metrics
+    outs:
+      - results/tables:
+          cache: false
+          persist: true

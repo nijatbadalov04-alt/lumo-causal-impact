@@ -1,0 +1,36 @@
+[project]
+name = "open-access-rail-causal"
+version = "0.1.0"
+description = "Causal effects of open-access rail entry on UK rail demand, air-rail modal shift, and carbon"
+authors = [{ name = "Nijat Badalov", email = "nijat.badalov.04@gmail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.12"
+readme = "README.md"
+keywords = ["causal-inference", "synthetic-control", "difference-in-differences", "double-machine-learning", "rail", "transport-economics"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [".venv", "notebooks", "data"]
+
+[tool.ruff.lint]
+# E/F pyflakes+pycodestyle, I import-sort, UP pyupgrade, B bugbear, SIM simplify
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = [
+    "E501",   # line length (handled pragmatically; math lines run long)
+    "E741",   # ambiguous variable names (l, I) — fine in math/stats code
+    "B008",   # function call in default arg (argparse/Path patterns)
+    "B905",   # zip(strict=) — our zips are equal-length by construction
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E402"]
+
+[tool.black]
+line-length = 120
+target-version = ["py312"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
+testpaths = ["tests"]

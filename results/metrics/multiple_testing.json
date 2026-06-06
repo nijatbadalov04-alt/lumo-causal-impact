@@ -1,0 +1,59 @@
+{
+  "family_size": 6,
+  "alpha": 0.05,
+  "bonferroni_threshold": 0.0083,
+  "n_survive_bonferroni": 3,
+  "n_survive_holm": 3,
+  "n_survive_bh_fdr": 5,
+  "tests": [
+    {
+      "test": "Edinburgh placebo-in-space (all flows)",
+      "p": 0.0077,
+      "bonferroni_survives": true,
+      "holm_survives": true,
+      "bh_survives": true,
+      "bh_adjusted_p": 0.0116
+    },
+    {
+      "test": "Newcastle placebo-in-space (all flows)",
+      "p": 0.0588,
+      "bonferroni_survives": false,
+      "holm_survives": false,
+      "bh_survives": false,
+      "bh_adjusted_p": 0.3528
+    },
+    {
+      "test": "Lumo vs off-corridor gap (exact)",
+      "p": 0.0222,
+      "bonferroni_survives": false,
+      "holm_survives": false,
+      "bh_survives": true,
+      "bh_adjusted_p": 0.0444
+    },
+    {
+      "test": "OD-flow event-study DiD (treated x post)",
+      "p": 0.0019,
+      "bonferroni_survives": true,
+      "holm_survives": true,
+      "bh_survives": true,
+      "bh_adjusted_p": 0.0023
+    },
+    {
+      "test": "East-Coast corridor clustering (distance-matched)",
+      "p": 7e-05,
+      "bonferroni_survives": true,
+      "holm_survives": true,
+      "bh_survives": true,
+      "bh_adjusted_p": 0.0001
+    },
+    {
+      "test": "Edinburgh distance-matched placebo (>=200km)",
+      "p": 0.0286,
+      "bonferroni_survives": false,
+      "holm_survives": false,
+      "bh_survives": true,
+      "bh_adjusted_p": 0.0858
+    }
+  ],
+  "interpretation": "Of 6 headline causal tests, 3 survive Holm-Bonferroni (FWER) and 5 survive Benjamini-Hochberg (FDR) at alpha=0.05. The decisive results \u2014 the OD event-study DiD, the East-Coast corridor clustering, and Edinburgh's placebo-in-space \u2014 remain significant after correction; only the borderline Newcastle all-flows placebo (p~0.06) does not, as expected."
+}

@@ -1,0 +1,6 @@
+# Normalise line endings: keep text as LF in the repo, let Git handle checkout.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.ods binary
+*.parquet binary

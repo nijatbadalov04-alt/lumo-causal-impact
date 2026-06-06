@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "Open-Access Rail Entry: Creation or Cannibalisation? A causal-inference study of Lumo on the East Coast Main Line"
+abstract: >-
+  A reproducible, multi-method causal-inference study of whether open-access rail
+  entry (Lumo, London-Edinburgh, launched 25 October 2021) grows the market or
+  cannibalises the franchised incumbent, and how much of any growth is abstracted
+  from air. Uses only open and public data.
+type: software
+authors:
+  - family-names: "Badalov"
+    given-names: "Nijat"
+    email: "nijat.badalov.04@gmail.com"
+    affiliation: "School of Electrical and Electronic Engineering, The University of Sheffield"
+version: "0.1.0"
+date-released: "2026-06-06"
+license: MIT
+keywords:
+  - open-access rail
+  - causal inference
+  - synthetic control
+  - difference-in-differences
+  - double machine learning
+  - air-rail modal shift
+  - transport decarbonisation

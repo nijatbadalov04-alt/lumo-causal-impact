@@ -1,0 +1,40 @@
+# ============================================================================
+# Data source configuration — ORR Estimates of Station Usage (and related).
+# All URLs verified accessible on access_date (HTTP 200). See SOURCES.md.
+# Config-driven by design: no source URLs hard-coded in scripts.
+# ============================================================================
+orr_base_url: "https://dataportal.orr.gov.uk"
+access_date: "2026-06-04"
+
+station_usage:
+  # Table 1415 = TIME SERIES of passenger entries/exits/interchanges by station.
+  # THE PROJECT SPINE: per-station annual history anchoring every counterfactual.
+  time_series_1415:
+    url: "/media/1908/table-1415-time-series-of-passenger-entries-and-exits-and-interchanges-by-station.ods"
+    filename: "table-1415-time-series-station-usage.ods"
+    role: "primary_timeseries"
+  # Table 1410 = latest annual snapshot (2024-25), ODS + CSV (for QA reconciliation).
+  snapshot_1410_ods:
+    url: "/media/1907/table-1410-passenger-entries-and-exits-and-interchanges-by-station.ods"
+    filename: "table-1410-station-usage-2024-25.ods"
+    role: "snapshot"
+  snapshot_1410_csv:
+    url: "/media/1909/table-1410-passenger-entries-and-exits-and-interchanges-by-station.csv"
+    filename: "table-1410-station-usage-2024-25.csv"
+    role: "snapshot_csv"
+
+documents:
+  methodology_report:   # REQUIRED READING (Sarah Chen): ticket->journey conversion, breaks
+    url: "/media/1917/station-usage-quality-and-methodology-report.pdf"
+    filename: "station-usage-quality-and-methodology-report.pdf"
+  statistical_release_2024_25:
+    url: "/media/msigcn24/station-usage-2024-25-statistical-release.pdf"
+    filename: "station-usage-2024-25-statistical-release.pdf"
+
+# Per-year snapshot files (Table 1410 format) — independent cross-check of the 1415 time series.
+historical_snapshots:
+  - {year: "2023-24", url: "/media/smfd4gmg/table-1410-estimates-of-station-usage-2023-24.ods", filename: "table-1410-station-usage-2023-24.ods"}
+  - {year: "2022-23", url: "/media/ybai31zv/table-1410-estimates-of-station-usage-2022-23.ods", filename: "table-1410-station-usage-2022-23.ods"}
+  - {year: "2021-22", url: "/media/2g3dctan/table-1410-estimates-of-station-usage-2021-22.ods", filename: "table-1410-station-usage-2021-22.ods"}
+  - {year: "2020-21", url: "/media/2148/table-1410-estimates-of-station-usage-2020-21.ods", filename: "table-1410-station-usage-2020-21.ods"}
+  - {year: "2019-20", url: "/media/2023/estimates-of-station-usage-2019-20.ods", filename: "table-1410-station-usage-2019-20.ods"}

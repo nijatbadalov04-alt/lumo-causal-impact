@@ -1,0 +1,14 @@
+{
+  "n_station_year_metric_rows": 149072,
+  "flag_counts": {
+    "observed": 129396,
+    "not_available": 12663,
+    "not_applicable": 7013
+  },
+  "true_zero_observed_cells": 48133,
+  "stations_with_any_observed": 2589,
+  "stations_full_28y_minus_gap": 2443,
+  "stations_with_internal_gaps": 8,
+  "total_internal_gap_cells_ee": 44,
+  "median_first_observed_year": 1997.0
+}

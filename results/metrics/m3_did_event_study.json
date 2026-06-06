@@ -1,0 +1,7 @@
+{
+  "n_treated": 4,
+  "n_control": 27,
+  "avg_post_effect_pct": 3.7,
+  "parallel_trends_pre_all_ns": true,
+  "effect_2024_pct": 6.0
+}

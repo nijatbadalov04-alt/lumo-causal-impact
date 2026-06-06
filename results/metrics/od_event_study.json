@@ -1,0 +1,41 @@
+{
+  "design": "Two-way FE event-study DiD on the ODM London-flow panel; randomization inference.",
+  "n_flows": 391,
+  "years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "treated": [
+    "Edinburgh",
+    "Newcastle"
+  ],
+  "baseline_year": 2019,
+  "post_years": [
+    2022,
+    2023,
+    2024
+  ],
+  "did_log_effect": 0.585,
+  "did_pct_effect": 79.5,
+  "did_perm_p_value_two_sided": 0.0019,
+  "launch_year_excluded_from_did": [
+    2021
+  ],
+  "event_study_pct": {
+    "2018": 0.7,
+    "2020": -8.1,
+    "2021": 76.9,
+    "2022": 88.3,
+    "2023": 67.5,
+    "2024": 69.7
+  },
+  "pretrend_2018_pct": 0.7,
+  "covid_2020_pct": -8.1,
+  "onset_2021_launch_year_pct": 76.9,
+  "interpretation": "Positive, significant post-Lumo treated effect (+79.5%); the 2018 coefficient is ~0 (no differential pre-trend) and 2020 shows treated/control crashed alike in COVID. The LAUNCH-YEAR (2021) coefficient is large and positive (~77.0%) \u2014 the effect ONSETS exactly at Lumo's Oct-2021 entry and sustains, strong causal timing. The partial launch year is excluded from the binary DiD (clean pre vs full post) but shown here."
+}

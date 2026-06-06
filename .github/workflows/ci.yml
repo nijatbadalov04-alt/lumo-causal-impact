@@ -1,0 +1,63 @@
+name: CI
+
+# Lint + tests on every push and PR. The data-dependent pipeline stages are NOT
+# run here: their inputs (~1.5 GB user-provided + auto-downloads) aren't present
+# on the runner, and each such stage has a guard clause that returns cleanly when
+# its data is absent. The test suite (which import-checks every stage and validates
+# the estimators on synthetic data) is the CI target.
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+# Cancel superseded runs on the same ref to save minutes.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-test:
+    name: lint + test (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+
+    env:
+      # UTF-8 everywhere (matches the dev box / Docker image) + import root.
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+      PYTHONPATH: ${{ github.workspace }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-ci.txt
+
+      - name: Install dependencies (CPU-only)
+        # requirements-ci.txt = pinned CPU stack + CPU torch. The CPU torch wheel
+        # (~200 MB) is resolved from the PyTorch CPU index; the default cu* wheel
+        # (multi-GB) is never fetched, so the runner disk stays well within limits.
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-ci.txt \
+            --extra-index-url https://download.pytorch.org/whl/cpu
+
+      - name: Ruff (lint)
+        run: ruff check src/ tests/
+
+      - name: Pytest
+        run: pytest -q

@@ -1,0 +1,11 @@
+# Conda environment spec (CPU stack). For the GPU deep model (M4), install the
+# Blackwell-compatible PyTorch separately from the cu128 wheel index — see README.
+name: uk-rail-openaccess
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r requirements.txt
+# GPU (not via conda): pip install torch --index-url https://download.pytorch.org/whl/cu128

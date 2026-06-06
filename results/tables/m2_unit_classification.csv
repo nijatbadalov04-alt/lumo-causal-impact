@@ -1,0 +1,32 @@
+crs,station_name,role,facility_owner,main_od,baseline_ee_2019,not_grouped,balanced
+LDS,Leeds,ecml_corridor_control,Network Rail,London Kings Cross,31020744.0,true,true
+CBG,Cambridge,ecml_corridor_control,Greater Anglia,London Kings Cross,11599814.0,true,true
+YRK,York,ecml_corridor_control,London North Eastern Railway,London Kings Cross,10089306.0,true,true
+PBO,Peterborough,ecml_corridor_control,London North Eastern Railway,London Kings Cross,4934692.0,true,true
+DON,Doncaster,ecml_corridor_control,London North Eastern Railway,London Kings Cross,3946406.0,true,true
+WGC,Welwyn Garden City,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,2738750.0,true,true
+DHM,Durham,ecml_corridor_control,London North Eastern Railway,Newcastle,2732836.0,true,true
+WKF,Wakefield Westgate,ecml_corridor_control,London North Eastern Railway,Leeds,2406928.0,false,true
+DAR,Darlington,ecml_corridor_control,London North Eastern Railway,London Kings Cross,2387932.0,true,true
+HAT,Hatfield (Herts),ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,2339604.0,true,true
+LCN,Lincoln,ecml_corridor_control,East Midlands Railway,London Kings Cross,1966100.0,true,true
+LET,Letchworth Garden City,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,1834720.0,true,true
+GRA,Grantham,ecml_corridor_control,London North Eastern Railway,London Kings Cross,1390648.0,true,true
+SNO,St Neots,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,1261664.0,true,true
+CMB,Cambridge North,ecml_corridor_control,Greater Anglia,London Kings Cross,949550.0,true,false
+KLN,Kings Lynn,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,931394.0,true,true
+NNG,Newark Northgate,ecml_corridor_control,London North Eastern Railway,London Kings Cross,909804.0,false,true
+NTR,Northallerton,ecml_corridor_control,TransPennine Express,York,712450.0,true,true
+BWK,Berwick-Upon-Tweed,ecml_corridor_control,London North Eastern Railway,Edinburgh,602484.0,true,true
+WLW,Welwyn North,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,567614.0,true,true
+KBW,Knebworth,ecml_corridor_control,Govia Thameslink Railway (Great Northern),London Kings Cross,547168.0,true,true
+RET,Retford,ecml_corridor_control,London North Eastern Railway,London Kings Cross,541674.0,true,true
+DUN,Dunbar,ecml_corridor_control,ScotRail,Edinburgh,473884.0,true,true
+ALM,Alnmouth,ecml_corridor_control,Northern Trains,Newcastle,344862.0,true,true
+THI,Thirsk,ecml_corridor_control,TransPennine Express,York,221504.0,true,true
+CLS,Chester-Le-Street,ecml_corridor_control,Northern Trains,Newcastle,193456.0,true,true
+EAG,Eaglescliffe,ecml_corridor_control,Northern Trains,London Kings Cross,191446.0,true,true
+EDB,Edinburgh,treated_lumo,Network Rail,Glasgow Queen Street,23087646.0,true,true
+NCL,Newcastle,treated_lumo,London North Eastern Railway,London Kings Cross,8815096.0,true,true
+SVG,Stevenage,treated_lumo,Govia Thameslink Railway (Great Northern),London Kings Cross,4634006.0,true,true
+MPT,Morpeth,treated_lumo,Northern Trains,Newcastle,506574.0,true,true

@@ -1,0 +1,190 @@
+{
+  "note": "Every estimate, read from the canonical metrics JSONs. % effects in the forest; mechanism/welfare separate.",
+  "estimates": [
+    {
+      "level": "station-total",
+      "method": "Naive off-ECML SC",
+      "estimand": "NCL station total",
+      "estimate_pct": 17.4,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "placebo p=0.10",
+      "verdict": "CONFOUNDED (retracted)"
+    },
+    {
+      "level": "station-total",
+      "method": "Within-corridor SC",
+      "estimand": "NCL vs ECML donors",
+      "estimate_pct": 12.2,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "placebo p=0.538",
+      "verdict": "not significant"
+    },
+    {
+      "level": "station-total",
+      "method": "Generalised SC (IFE)",
+      "estimand": "NCL, r=3 factors",
+      "estimate_pct": 16.3,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "robust to r",
+      "verdict": "descriptive"
+    },
+    {
+      "level": "station-total",
+      "method": "Event-study DiD",
+      "estimand": "Lumo stns avg post",
+      "estimate_pct": 3.7,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "parallel-trends OK",
+      "verdict": "small"
+    },
+    {
+      "level": "station-total",
+      "method": "Deep counterfactual",
+      "estimand": "NCL (conformal)",
+      "estimate_pct": 5.0,
+      "ci_lo": -6.2,
+      "ci_hi": 17.5,
+      "inference": "conformal 90% spans 0",
+      "verdict": "not significant"
+    },
+    {
+      "level": "station-total",
+      "method": "Callaway-Sant'Anna",
+      "estimand": "overall short-run ATT",
+      "estimate_pct": 16.3,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "randomization p=0.1564",
+      "verdict": "not significant"
+    },
+    {
+      "level": "operator",
+      "method": "DiD-in-ratios",
+      "estimand": "LNER recovery vs peers",
+      "estimate_pct": 25.4,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "vs peers <100%",
+      "verdict": "large, descriptive"
+    },
+    {
+      "level": "operator",
+      "method": "CausalImpact / BSTS",
+      "estimand": "LNER vs synthetic",
+      "estimate_pct": -4.8,
+      "ci_lo": -19.3,
+      "ci_hi": 12.2,
+      "inference": "95% CI excl 0: False",
+      "verdict": "not significant"
+    },
+    {
+      "level": "market-OD",
+      "method": "ODM market recovery",
+      "estimand": "Edinburgh<->London",
+      "estimate_pct": 59.9,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "operator-agnostic market",
+      "verdict": "CREATION"
+    },
+    {
+      "level": "market-OD",
+      "method": "ODM market recovery",
+      "estimand": "Newcastle<->London",
+      "estimate_pct": 20.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "operator-agnostic market",
+      "verdict": "CREATION"
+    },
+    {
+      "level": "market-OD",
+      "method": "Placebo-in-space (RI)",
+      "estimand": "EDB vs 391 flows",
+      "estimate_pct": 59.9,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "RI p=0.0077",
+      "verdict": "SIGNIFICANT"
+    },
+    {
+      "level": "market-OD",
+      "method": "Corridor clustering",
+      "estimand": "ECML vs other long-dist",
+      "estimate_pct": 20.5,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "perm p=7e-05",
+      "verdict": "SIGNIFICANT"
+    },
+    {
+      "level": "market-OD",
+      "method": "OD event-study DiD",
+      "estimand": "treated x post",
+      "estimate_pct": 79.5,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "perm p=0.0019",
+      "verdict": "SIGNIFICANT"
+    },
+    {
+      "level": "market-OD",
+      "method": "Causal forest (DML)",
+      "estimand": "ECML CATE, 391 flows",
+      "estimate_pct": 22.0,
+      "ci_lo": 11.5,
+      "ci_hi": 36.0,
+      "inference": "95% CI excludes 0",
+      "verdict": "SIGNIFICANT"
+    },
+    {
+      "level": "external",
+      "method": "GC replication (pre-COVID)",
+      "estimand": "Sunderland",
+      "estimate_pct": 72.9,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "placebo p=0.1881",
+      "verdict": "suggestive (NS)"
+    },
+    {
+      "level": "external",
+      "method": "GC replication (pre-COVID)",
+      "estimand": "Bradford",
+      "estimate_pct": 49.4,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "placebo p=0.1761",
+      "verdict": "suggestive (NS)"
+    },
+    {
+      "level": "external",
+      "method": "Open-access sector",
+      "estimand": "intercept growth x",
+      "estimate_pct": 213.0,
+      "ci_lo": null,
+      "ci_hi": null,
+      "inference": "2011->2024",
+      "verdict": "3.1x sector growth"
+    }
+  ],
+  "mechanism_and_welfare": {
+    "air_to_rail_abstraction_pct_of_growth": 65.5,
+    "rail_share_of_air_rail_pre_post_pct": [
+      28.8,
+      43.5
+    ],
+    "carbon_saved_ktonnes_per_yr_90ci": [
+      83.7,
+      108.3,
+      128.8
+    ],
+    "footfall_validation_pearson_r": 0.927,
+    "multiplicity_survive_bh_fdr": "5/6"
+  },
+  "headline": "Station-total methods cluster small / not-significant (dilution + corridor confound); the MARKET (OD) level carries the large, significant creation effect (Edinburgh +60%, RI p=0.008; OD DiD +79.5%, p=0.002; causal-forest CATE +22%, CI excludes 0); operator level shows no cannibalisation; mechanism (65% air-abstraction), carbon (84-129 kt/yr), footfall (r=0.93) and GC replication corroborate. 5/6 headline tests survive FDR."
+}

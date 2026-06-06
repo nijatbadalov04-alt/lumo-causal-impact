@@ -1,0 +1,63 @@
+{
+  "per_station": [
+    {
+      "crs": "NCL",
+      "station": "Newcastle",
+      "naive_sc_pct": 17.4079528438968,
+      "naive_sc_p": 0.0975609756097561,
+      "within_corridor_pct": 12.2,
+      "within_corridor_p": 0.538,
+      "augmented_sc_pct": 9.3,
+      "deep_pct": 5.0,
+      "deep_conf_lo": -6.2,
+      "deep_conf_hi": 17.5
+    },
+    {
+      "crs": "SVG",
+      "station": "Stevenage",
+      "naive_sc_pct": 8.788863780685086,
+      "naive_sc_p": 0.04878048780487805,
+      "within_corridor_pct": -11.0,
+      "within_corridor_p": 0.538,
+      "augmented_sc_pct": 1.8,
+      "deep_pct": 3.9,
+      "deep_conf_lo": -7.2,
+      "deep_conf_hi": 16.2
+    },
+    {
+      "crs": "MPT",
+      "station": "Morpeth",
+      "naive_sc_pct": 45.5803499061181,
+      "naive_sc_p": 0.04878048780487805,
+      "within_corridor_pct": 31.5,
+      "within_corridor_p": 0.538,
+      "augmented_sc_pct": 52.6,
+      "deep_pct": 9.1,
+      "deep_conf_lo": -2.5,
+      "deep_conf_hi": 22.1
+    },
+    {
+      "crs": "EDB",
+      "station": "Edinburgh",
+      "naive_sc_pct": 23.12968292932087,
+      "naive_sc_p": 0.8048780487804879,
+      "within_corridor_pct": -0.6,
+      "within_corridor_p": 1.0,
+      "augmented_sc_pct": -7.5,
+      "deep_pct": 2.8,
+      "deep_conf_lo": -8.1,
+      "deep_conf_hi": 15.1
+    }
+  ],
+  "overall_and_market": {
+    "did_within_corridor_avg_post_pct": 3.7,
+    "did_parallel_trends_ok": true,
+    "operator_DiD_in_ratios_LNER_pct": 32.2,
+    "operator_DiD_in_ratios_LNER_Lumo_pct": 37.8,
+    "causal_impact_BSTS_LNER_pct": -4.8,
+    "causal_impact_BSTS_ci95": [
+      -19.3,
+      12.2
+    ]
+  }
+}

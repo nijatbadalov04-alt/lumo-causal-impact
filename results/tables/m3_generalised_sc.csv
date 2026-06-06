@@ -1,0 +1,13 @@
+crs,station_name,n_factors,gsc_effect_pct
+EDB,Edinburgh,2,31.3
+NCL,Newcastle,2,33.3
+MPT,Morpeth,2,47.5
+SVG,Stevenage,2,-9.2
+EDB,Edinburgh,3,-2.4
+NCL,Newcastle,3,16.3
+MPT,Morpeth,3,-9.2
+SVG,Stevenage,3,-6.5
+EDB,Edinburgh,4,-15.7
+NCL,Newcastle,4,16.1
+MPT,Morpeth,4,-20.0
+SVG,Stevenage,4,-3.8

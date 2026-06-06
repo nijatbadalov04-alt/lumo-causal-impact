@@ -1,0 +1,52 @@
+{
+  "odm_coverage": {
+    "financial_years_loaded": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "n_years": 7,
+    "launch_year_2021_present": true,
+    "expected_full_set": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "missing": [],
+    "note": "year-agnostic loader; add data/raw/odm/ODM_for_rdm_2021-22.csv to include FY2021-22 (no code change)."
+  },
+  "interpretation": "recovery = (2023-24 & 2024-25 mean) / (2018-19 & 2019-20 mean) of the London<->city market",
+  "group_mean_recovery": {
+    "ECML non-Lumo": 1.29,
+    "Lumo": 1.312,
+    "Off-corridor": 0.993
+  },
+  "Newcastle_London_recovery": 1.2,
+  "Edinburgh_London_recovery": 1.599,
+  "Newcastle_London_journeys": {
+    "2018": 1336552,
+    "2019": 1226942,
+    "2020": 194004,
+    "2021": 1077588,
+    "2022": 1490596,
+    "2023": 1466412,
+    "2024": 1609804
+  },
+  "Edinburgh_London_journeys": {
+    "2018": 1387856,
+    "2019": 1389514,
+    "2020": 174290,
+    "2021": 1314154,
+    "2022": 2057376,
+    "2023": 2114502,
+    "2024": 2326252
+  }
+}

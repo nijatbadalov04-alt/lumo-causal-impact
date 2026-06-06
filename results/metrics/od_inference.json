@@ -1,0 +1,46 @@
+{
+  "design": "Randomization/placebo-in-space inference on ODM London-flow recoveries (post/pre).",
+  "pre_years": [
+    2018,
+    2019
+  ],
+  "post_years": [
+    2023,
+    2024
+  ],
+  "min_pre_journeys": 150000,
+  "n_comparable_flows": 391,
+  "median_recovery_all_flows": 0.814,
+  "placebo_in_space_per_treated": {
+    "Edinburgh": {
+      "recovery": 1.599,
+      "rank_of_n": [
+        3,
+        391
+      ],
+      "ri_p_value_one_sided": 0.0077,
+      "percentile": 99.5
+    },
+    "Newcastle": {
+      "recovery": 1.2,
+      "rank_of_n": [
+        23,
+        391
+      ],
+      "ri_p_value_one_sided": 0.0588,
+      "percentile": 94.4
+    }
+  },
+  "gap_test": {
+    "lumo_cities": [
+      "Edinburgh",
+      "Newcastle"
+    ],
+    "off_corridor_n": 8,
+    "observed_gap": 0.407,
+    "exact_p_value": 0.0222,
+    "n_assignments": 45,
+    "note": "exact randomization p over all C(pool,k) label assignments (not Monte-Carlo)"
+  },
+  "interpretation": "Edinburgh's +60% recovery sits in the extreme upper tail of all comparable London flows (small RI p-value); the Lumo-vs-off-corridor gap is significant under permutation. The growth is statistically exceptional, not a typical post-COVID draw."
+}

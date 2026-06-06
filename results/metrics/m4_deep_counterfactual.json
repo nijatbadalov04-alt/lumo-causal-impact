@@ -1,0 +1,36 @@
+{
+  "gpu": {
+    "gpu_util_mean": 98.6,
+    "gpu_util_p50": 99.0,
+    "gpu_util_p90": 100.0,
+    "gpu_util_max": 100.0,
+    "gpu_mem_used_mb_max": 6420.0,
+    "n_samples": 597
+  },
+  "train_seconds": 184.5,
+  "epochs": 1500,
+  "params_millions": 14.52,
+  "conformal_q90_log": 0.11252745306693956,
+  "effects": {
+    "EDB": {
+      "deep_effect_pct": 2.8,
+      "conformal_lo_pct": -8.1,
+      "conformal_hi_pct": 15.1
+    },
+    "NCL": {
+      "deep_effect_pct": 5.0,
+      "conformal_lo_pct": -6.2,
+      "conformal_hi_pct": 17.5
+    },
+    "MPT": {
+      "deep_effect_pct": 9.1,
+      "conformal_lo_pct": -2.5,
+      "conformal_hi_pct": 22.1
+    },
+    "SVG": {
+      "deep_effect_pct": 3.9,
+      "conformal_lo_pct": -7.2,
+      "conformal_hi_pct": 16.2
+    }
+  }
+}

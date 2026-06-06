@@ -1,0 +1,49 @@
+# ============================================================================
+# Global project configuration. Magic numbers / constants live HERE, not in code
+# Loaded via src.utils.config.load_config("base").
+# ============================================================================
+seed: 20211025            # Lumo launch date — memorable global RNG seed
+random_seeds: [0, 1, 2, 3, 4]   # multi-seed runs for ML (variance / GPU saturation)
+
+project:
+  name: "Causal effects of open-access rail operator entry on UK rail demand"
+  primary_treatment: "lumo"
+
+# --- Treatment definitions (dates verified; see SOURCES.md §3) ---
+treatments:
+  lumo:
+    operator: "Lumo"
+    launch_date: "2021-10-25"
+    treat_year_start: 2021        # FY Apr2021-Mar2022 contains the launch
+    first_full_post_year: 2022    # first full post-treatment financial year
+    served_crs: ["EDB", "NCL", "MPT", "SVG"]   # Edinburgh, Newcastle, Morpeth, Stevenage (verified present + reconciled)
+    line: "East Coast Main Line"
+    london_terminal: "KGX"
+    era: "LENNON (clean, post-2004)"
+  hull_trains:
+    operator: "Hull Trains"
+    launch_date: "2000-09-25"
+    treat_year_start: 2000
+    served_crs_primary: ["HUL"]   # full stop list to verify against panel at M2
+    era: "spans CAPRI->LENNON break + 2003-04 gap — REPLICATION/robustness only"
+  grand_central:
+    operator: "Grand Central"
+    launches:
+      sunderland: {date: "2007-12-18", treat_year_start: 2007, served_crs_primary: ["SUN"]}
+      bradford:   {date: "2010-05-23", treat_year_start: 2010, served_crs_primary: ["BDI"]}
+    era: "LENNON (clean, post-2004)"
+    note: "intermediate-stop CRS codes to be verified against the panel at M2"
+
+# --- Panel structure (from parsed ORR Table 1415) ---
+panel:
+  metrics: ["entries_exits", "interchanges"]
+  year_min: 1997
+  year_max: 2024
+  lennon_era_min: 2004      # first comparable year after the CAPRI->LENNON break
+  excluded_years: [2003]    # 2003-04: ORR produced no estimates (structural gap)
+  break_years: [2022]       # [b] break flag on the 2022-23 column in Table 1415
+
+paths:
+  station_usage_long: "data/interim/station_usage_long.parquet"
+  station_meta: "data/interim/station_meta.parquet"
+  station_attributes_2024_25: "data/interim/station_attributes_2024_25.parquet"

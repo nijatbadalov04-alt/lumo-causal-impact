@@ -1,0 +1,49 @@
+{
+  "design": "Callaway-Sant'Anna group-time ATT; never-treated clean controls; cluster bootstrap.",
+  "cohorts": {
+    "2007": [
+      "SUN"
+    ],
+    "2010": [
+      "BDI"
+    ],
+    "2021": [
+      "EDB",
+      "NCL",
+      "MPT",
+      "SVG"
+    ]
+  },
+  "covid_robust_base_year": {
+    "2007": 2006,
+    "2010": 2009,
+    "2021": 2019
+  },
+  "n_controls": 2338,
+  "overall_att_log": 0.1513,
+  "overall_att_pct": 16.3,
+  "overall_att_control_bootstrap_se": 0.0044,
+  "overall_att_randomization_p": 0.1564,
+  "se_caveat": "control-bootstrap SE ignores few-treated-units uncertainty; trust the randomization p.",
+  "dynamic_att_pct": {
+    "-1": -16.8,
+    "0": 6.6,
+    "1": 26.6,
+    "2": 26.4,
+    "3": 24.3
+  },
+  "dynamic_att_caveats": "e=-1 is ONLY the Lumo cohort's 2020 (COVID trough), not a parallel-trends test; there are no pooled pre-trend points -> the design CANNOT test parallel trends. Cohorts are not on a common calendar clock (Lumo's e=0 spans 2019->2021 incl. COVID; GC's e=0 is a 1-yr change), so read per-cohort series, not the pooled dynamic, as the clean object.",
+  "lumo_event_study_pct": {
+    "-1": -16.8,
+    "0": 13.5,
+    "1": 14.5,
+    "2": 9.6,
+    "3": 11.2
+  },
+  "cohort_att_pct_at_e_plus1": {
+    "2007": 60.6,
+    "2010": 10.3,
+    "2021": 14.5
+  },
+  "interpretation": "Staggered-adoption ATT free of TWFE negative weighting (Goodman-Bacon). The open-access cohorts show a POSITIVE station-total ATT (Lumo cohort +14.5% first-post; short-run overall +16%), but it is NOT significant under honest few-treated-units randomization inference (p~0.15) \u2014 consistent with the rest of the project: the station-total signal is positive but not robustly identified (4-6 treated units + multi-market dilution), and the DECISIVE significant evidence is the OD-flow analysis. CS rules out the TWFE negative-weighting artefact as the reason the station-total effect looks small."
+}

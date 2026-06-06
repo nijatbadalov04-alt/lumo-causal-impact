@@ -1,0 +1,29 @@
+# Keep the build context small and the image clean. Mirrors .gitignore for the
+# heavy/uncacheable bits, plus build-host-only dirs.
+
+# User-provided raw data (~1.5 GB) — mounted at run time, never baked in.
+data/
+
+# Local virtualenv (Windows dev box) — image installs its own Linux deps.
+.venv/
+
+# Generated outputs and caches.
+results/
+logs/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# VCS / CI metadata not needed inside the image.
+.git/
+.github/
+.gitignore
+.gitattributes
+
+# Docs and scratch that don't affect the build.
+notebooks/
+*.md
+!README.md
