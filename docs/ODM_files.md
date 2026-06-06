@@ -1,4 +1,4 @@
-# ODM files, the complete seven-year set
+# ODM files: the complete seven-year set
 
 The origin–destination analysis loads **every CSV** in `data/raw/odm/` as one timeline. The loader is
 year-agnostic: it parses the financial-year start from the filename (e.g. `…2021-22…` → year 2021), so

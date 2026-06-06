@@ -40,7 +40,7 @@ the total market, not Lumo's isolated marginal share (the operator-agnostic ODM 
 - **Difference-in-ratios** of the incumbent (LNER) against peer long-distance operators.
 - **Bayesian structural time-series** (CausalImpact) counterfactual for the incumbent.
 
-### Market (OD) level, the decisive tier
+### Market (OD) level: the decisive tier
 - **ODM recovery test**: post/pre ratio of total London↔city journeys, operator-agnostic.
 - **Placebo-in-space randomisation inference**: computes the recovery of every comparable London flow
   (pre-volume ≥ 150k) and ranks the treated flows.
