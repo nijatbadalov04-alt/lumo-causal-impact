@@ -1,5 +1,5 @@
 [project]
-name = "open-access-rail-causal"
+name = "lumo-causal-impact"
 version = "0.1.0"
 description = "Causal effects of open-access rail entry on UK rail demand, air-rail modal shift, and carbon"
 authors = [{ name = "Nijat Badalov", email = "nijat.badalov.04@gmail.com" }]

@@ -28,7 +28,7 @@ the total market, not Lumo's isolated marginal share (the operator-agnostic ODM 
   LENNON era (≥2004); donors are balanced, non-grouped stations screened of Elizabeth-line and Avanti
   contamination; convex weights over the nearest donors by pre-period trajectory; placebo-in-space
   inference.
-- **Within-corridor synthetic control** — restricts donors to the East Coast corridor, which removes
+- **Within-corridor synthetic control**: restricts donors to the East Coast corridor, which removes
   the corridor-wide recovery confound.
 - **Augmented / ridge synthetic control** (Ben-Michael–Feller–Rothstein) and **generalised synthetic
   control with interactive fixed effects** (Xu).
@@ -40,16 +40,16 @@ the total market, not Lumo's isolated marginal share (the operator-agnostic ODM 
 - **Difference-in-ratios** of the incumbent (LNER) against peer long-distance operators.
 - **Bayesian structural time-series** (CausalImpact) counterfactual for the incumbent.
 
-### Market (OD) level — the decisive tier
-- **ODM recovery test** — post/pre ratio of total London↔city journeys, operator-agnostic.
-- **Placebo-in-space randomisation inference** — computes the recovery of every comparable London flow
+### Market (OD) level, the decisive tier
+- **ODM recovery test**: post/pre ratio of total London↔city journeys, operator-agnostic.
+- **Placebo-in-space randomisation inference**: computes the recovery of every comparable London flow
   (pre-volume ≥ 150k) and ranks the treated flows.
-- **Distance-matched corridor-clustering permutation test** — compares the East Coast corridor against
+- **Distance-matched corridor-clustering permutation test**: compares the East Coast corridor against
   other long-distance flows at matched distance.
-- **OD-flow panel event-study DiD** — two-way (flow + year) fixed effects via Frisch–Waugh demeaning,
+- **OD-flow panel event-study DiD**: two-way (flow + year) fixed effects via Frisch–Waugh demeaning,
   with a joint event-study fit and large-draw randomisation inference. The partial launch year is
   excluded from the binary pre-vs-post contrast and reported as its own coefficient (the onset).
-- **Double-machine-learning causal forest** — a cross-fitted T-learner for the conditional treatment
+- **Double-machine-learning causal forest**: a cross-fitted T-learner for the conditional treatment
   surface and a Robinson partialling-out DML estimator for the average effect, adjusting for distance
   and pre-volume. Read as a complement (selection-on-observables), not a substitute for the design.
 
@@ -62,12 +62,12 @@ the total market, not Lumo's isolated marginal share (the operator-agnostic ODM 
 
 ### Inference and robustness
 - **Randomisation / permutation inference** throughout.
-- **Multiplicity** — family-wise (Holm) and false-discovery-rate (Benjamini–Hochberg) correction of
+- **Multiplicity**: family-wise (Holm) and false-discovery-rate (Benjamini–Hochberg) correction of
   the headline tests.
-- **Sensitivity to unobserved confounding** — Oster's δ, the VanderWeele–Ding E-value, and the
+- **Sensitivity to unobserved confounding**: Oster's δ, the VanderWeele–Ding E-value, and the
   Cinelli–Hazlett robustness value.
-- **Confounder checks** — incumbent punctuality and fares around entry.
-- **External validation** — Network Rail physical gate counts against the modelled ORR usage, and a
+- **Confounder checks**: incumbent punctuality and fares around entry.
+- **External validation**: Network Rail physical gate counts against the modelled ORR usage, and a
   pre-pandemic Grand Central placebo with no COVID confound.
 
 Each estimator is validated against ground truth: a known injected effect is recovered to machine

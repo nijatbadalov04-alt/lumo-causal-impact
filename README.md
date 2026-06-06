@@ -21,10 +21,10 @@ from the scripts in this repository.
 When an open-access operator enters, post-entry corridor ridership can change for
 three mutually exclusive reasons:
 
-1. **Abstraction from the incumbent** — share moves between rail operators; total
+1. **Abstraction from the incumbent**: share moves between rail operators; total
    corridor rail demand is unchanged (the regulator's "cannibalisation" concern).
-2. **Modal shift** — travellers move to rail from air or car (the climate dividend).
-3. **Induced demand** — genuinely new trips.
+2. **Modal shift**: travellers move to rail from air or car (the climate dividend).
+3. **Induced demand**: genuinely new trips.
 
 The regulator's test pits (1) against (2)+(3); the climate case rests on (2). An
 operator-agnostic origin–destination matrix nets out (1) by construction, so any
@@ -80,18 +80,18 @@ The design is deliberately multi-method, with the unit of analysis moved from st
 origin–destination flows, where the policy question is properly posed. Estimators
 (full descriptions in [`docs/METHODS.md`](docs/METHODS.md)):
 
-- **Station-total counterfactuals** — convex synthetic control, within-corridor synthetic
+- **Station-total counterfactuals**: convex synthetic control, within-corridor synthetic
   control, augmented/ridge synthetic control, generalised synthetic control with
   interactive fixed effects, a within-corridor event-study difference-in-differences, and a
   Callaway–Sant'Anna staggered-adoption estimator.
-- **Operator level** — a difference-in-ratios of the incumbent against peer operators, and a
+- **Operator level**: a difference-in-ratios of the incumbent against peer operators, and a
   Bayesian structural time-series (CausalImpact) counterfactual.
-- **Market (OD) level** — the ODM recovery test, placebo-in-space randomisation inference, a
+- **Market (OD) level**: the ODM recovery test, placebo-in-space randomisation inference, a
   distance-matched corridor-clustering permutation test, an OD-flow panel event-study DiD
   with randomisation inference, and a double-machine-learning causal forest.
-- **Deep counterfactuals** — an attention-over-donors ensemble and a domain-adversarial,
+- **Deep counterfactuals**: an attention-over-donors ensemble and a domain-adversarial,
   treatment-invariant network, both with split-conformal prediction intervals.
-- **Inference and robustness** — randomisation/permutation inference throughout, family-wise
+- **Inference and robustness**: randomisation/permutation inference throughout, family-wise
   (Holm) and false-discovery-rate (Benjamini–Hochberg) multiplicity correction, and a formal
   sensitivity analysis for unobserved confounding (Oster's δ, the VanderWeele–Ding E-value,
   and the Cinelli–Hazlett robustness value).
@@ -110,9 +110,9 @@ origin–destination flows, where the policy question is properly posed. Estimat
 │   │   └── deep/         #  attention ensemble, domain-adversarial CRN, GRU
 │   ├── evaluate/        # robustness, sensitivity, multiplicity, triangulation
 │   └── viz/             # figures
-├── configs/             # YAML config (data URLs, panel structure) — no magic numbers in code
+├── configs/             # YAML config (data URLs, panel structure), no magic numbers in code
 ├── tests/               # pytest suite (imports + estimator validation on synthetic data)
-├── results/             # figures/, metrics/ (JSON), tables/ (CSV) — committed outputs
+├── results/             # figures/, metrics/ (JSON), tables/ (CSV), committed outputs
 ├── data/                # raw/ interim/ processed/ (git-ignored; see data/README.md)
 ├── docs/                # METHODS, RESULTS, LIMITATIONS, DATA_SOURCES
 ├── run_pipeline.py      # idempotent end-to-end orchestrator (guard-skips stages w/o data)
@@ -134,7 +134,7 @@ pip install -r requirements.txt
 # 3. Run the pipeline (idempotent; each stage guard-skips if its inputs are absent)
 python run_pipeline.py
 
-# 4. Tests (no data required — estimators are validated on synthetic ground truth)
+# 4. Tests (no data required, estimators are validated on synthetic ground truth)
 pytest
 ```
 
@@ -153,13 +153,13 @@ grouped by level of analysis.
 - **Code** in this repository is released under the [MIT License](LICENSE).
 - **Data** are the property of their providers (ORR, CAA, Network Rail, DfT) and are used
   under the UK Open Government Licence v3.0; this repository does not redistribute the raw
-  data — only the code that processes it and the derived results.
+  data, only the code that processes it and the derived results.
 - The University of Sheffield coat of arms, where used in related materials, is reproduced
   under CC BY-SA 4.0 and is not covered by this repository's licence.
 
 ## Author
 
-**Nijat Badalov** — MSc Advanced Control and Systems Engineering, School of Electrical and
+**Nijat Badalov**, MSc Advanced Control and Systems Engineering, School of Electrical and
 Electronic Engineering, Faculty of Engineering, The University of Sheffield.
 Contact: nijat.badalov.04@gmail.com
 
@@ -168,4 +168,4 @@ Contact: nijat.badalov.04@gmail.com
 If you use this code or its results, please cite it (see [`CITATION.cff`](CITATION.cff)):
 
 > Badalov, N. (2026). *Open-Access Rail Entry: Creation or Cannibalisation? A causal-inference
-> study of Lumo on the East Coast Main Line* [Software]. https://github.com/<your-account>/open-access-rail-causal
+> study of Lumo on the East Coast Main Line* [Software]. https://github.com/nijatbadalov04-alt/lumo-causal-impact

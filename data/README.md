@@ -26,7 +26,7 @@ data/
 |---|---|---|
 | ORR station usage (Table 1415/1410), operator journeys (Table 1223), performance (3113), fares (7180) | Direct download from the ORR data portal | Open Government Licence v3.0. Some are auto-downloaded by `src/ingest`. |
 | ORR Origin–Destination Matrix (ODM) | Rail Data Marketplace (free account) | The decisive market-level dataset; all seven financial years including the 2021–22 launch year. ~0.8 GB. |
-| CAA Table 12.2 domestic air route analysis | Direct download from the CAA | Open Government Licence. Terminal passengers, both directions, counted once per journey — the same unit as ODM journeys. |
+| CAA Table 12.2 domestic air route analysis | Direct download from the CAA | Open Government Licence. Terminal passengers, both directions, counted once per journey, the same unit as ODM journeys. |
 | Green Travel per-pair emissions | Rail Data Marketplace (free account) | kg CO₂e per passenger by mode, per OD pair. ~1.2 GB. |
 | Network Rail Daily Concourse Footfall | Rail Data Marketplace (free account) | Physical gate counts at 18 managed stations; used to validate the modelled ORR usage. |
 | NaPTAN rail-node coordinates | DfT NaPTAN API | Station coordinates -> distance-to-London covariate. |
@@ -42,4 +42,4 @@ naming convention.
   `configs/secrets.local.yaml` (git-ignored) is the place for any local key.
 - All datasets are used under the **UK Open Government Licence v3.0** and remain the property
   of their providers. This repository redistributes neither the raw data nor any provider's
-  proprietary content — only the code that processes it and the derived results.
+  proprietary content, only the code that processes it and the derived results.

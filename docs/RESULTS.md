@@ -11,7 +11,7 @@ All numbers below are produced by the pipeline and stored under `results/metrics
 | Naive off-corridor synthetic control | Newcastle total | +17.4% | placebo *p* = 0.10; **confounded** |
 | Within-corridor synthetic control | Newcastle vs ECML | +12% | *p* = 0.54; not significant |
 | Generalised SC (interactive FE) | Newcastle | +16% | descriptive |
-| Event-study DiD (Lumo stops, avg) | — | +3.7% | parallel trends ok; small |
+| Event-study DiD (Lumo stops, avg) | n/a | +3.7% | parallel trends ok; small |
 | Deep counterfactual (conformal) | Newcastle | +5.0% | [−6, +18]; n.s. |
 | Callaway–Sant'Anna | overall ATT | +16% | RI *p* = 0.15; n.s. |
 
@@ -43,7 +43,7 @@ the OD level.
 - **Corridor clustering:** the East Coast corridor out-recovered other long-distance routes (median
   1.21 vs 0.92; permutation **p < 10⁻⁴**; 7 of the top-10 long-distance flows are ECML).
 - **OD-flow event-study DiD:** **+79.5%** (*p* = 0.002), flat pre-trend (2018 coefficient +0.7%), with
-  the **launch-year coefficient +77%** — the effect onsets exactly when Lumo entered.
+  the **launch-year coefficient +77%**: the effect onsets exactly when Lumo entered.
 - **Causal forest (DML):** corridor effect **+22%**, 95% CI **[11.5, 36.0]** (excludes zero).
 
 The one commuter Lumo stop (Stevenage) saw its London market fall (−11%), consistent with Lumo's
@@ -57,7 +57,7 @@ cheap-advance, leisure-oriented model.
 | Newcastle (ECML) | +256 | −13 | 73% → 77% | ≈ 5% (mostly induced) | yes |
 | **Glasgow** (WCML) | +31 | −346 | 23% → 27% | rail did **not** capture | no (placebo) |
 
-Air fell on both Scottish corridors; rail captured it only on the East Coast, where capacity grew —
+Air fell on both Scottish corridors; rail captured it only on the East Coast, where capacity grew,
 isolating a rail-supply mechanism from a generic, exogenous air decline.
 
 ## 5. Carbon
@@ -74,7 +74,7 @@ carbon unless more than ~90% of the new journeys are purely induced.
   decisive ones (corridor clustering, OD event-study DiD, Edinburgh placebo) survive the stricter
   Holm–Bonferroni family-wise control.
 - **Sensitivity:** Oster δ = 1.5 and an E-value of 1.94 lean robust; the Cinelli–Hazlett robustness
-  value (≈0.12) shows linear covariate adjustment alone is not bulletproof — which is why
+  value (≈0.12) shows linear covariate adjustment alone is not bulletproof, which is why
   identification rests on the design (Glasgow placebo, flat pre-trend, corridor clustering, event-study
   onset).
 - **Confounders:** the incumbent's punctuality *worsened* after entry (PPM 86.4% → 81.6%), so growth
@@ -82,4 +82,4 @@ carbon unless more than ~90% of the new journeys are purely induced.
 - **Validation:** Network Rail physical gate counts correlate with the modelled ORR usage at *r* = 0.93
   across 18 managed stations.
 - **External validity:** a pre-pandemic Grand Central placebo (no COVID confound) gives Sunderland +73%
-  and Bradford +49% against comparable stations — suggestive, directionally consistent replication.
+  and Bradford +49% against comparable stations, suggestive, directionally consistent replication.

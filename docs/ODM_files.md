@@ -1,8 +1,8 @@
-# ODM files — the complete seven-year set
+# ODM files, the complete seven-year set
 
 The origin–destination analysis loads **every CSV** in `data/raw/odm/` as one timeline. The loader is
 year-agnostic: it parses the financial-year start from the filename (e.g. `…2021-22…` → year 2021), so
-adding a year needs no code change — drop the file in and re-run.
+adding a year needs no code change, drop the file in and re-run.
 
 The complete set is **seven financial years**:
 
@@ -32,6 +32,6 @@ The complete set is **seven financial years**:
 
 The pre/post windows are **pre = 2018-19 and 2019-20** (clean pre-COVID) and **post = 2023-24 and
 2024-25** (recovered). The 2021-22 launch year is a transition year (Lumo launched mid-year, October
-2021, amid the COVID recovery), so it is used in neither window — it only adds a mid-timeline point that
+2021, amid the COVID recovery), so it is used in neither window, it only adds a mid-timeline point that
 improves the event study's launch-year resolution. The headline estimates are computed from the clean
 pre/post means and are unchanged by its presence.
